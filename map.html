@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalHands - Find Plumbers</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+    <link rel="stylesheet" href="maps.css">
+</head>
+<body>          
+    <div class="navbar">
+        <div class="nav-left">
+            <img src="/assets/logo.jpg" alt="logo" class="logo">
+        </div>   
+        <div class="nav-center">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#About-Us">About Us</a>   
+            <a href="index.html#provider">Become a Provider</a>
+            <a href="index.html#provider">Booking Status</a>
+        </div>
+        <div class="nav-right">
+            <div class="hamburger" onclick="openMenu()">&#9776;</div>
+        </div>
+    </div>
+    <div class="Sidebar" id="sidebar" style="display:none;">
+        <div class="close-icon" onclick="closeMenu()">✖</div>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#About-Us">About Us</a>
+        <a href="index.html#provider">Booking Status</a>
+    </div>
+    <div class="header">
+    </div>
+    
+    <div class="main-content">
+        <div class="map-section">
+            <div id="map"></div>
+        </div>
+
+        <div class="sidebar">
+            <div id="locationStatus" class="status-indicator status-success">
+                <i class="fa-solid fa-circle-check"></i> Location set to Surampalem, Andhra Pradesh.
+            </div>
+
+            <h3><i class="fa-solid fa-magnifying-glass"></i> Available Plumbers</h3>
+            <div id="providersList">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    Loading professionals in your area...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="providerDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <div class="provider-info-section">
+                    <h2>Provider Details</h2>
+                    <div id="modalProviderDetails">
+                    </div>
+                    <div class="provider-work-photos">
+                        <h3>Work Photos</h3>
+                        <div id="modalWorkPhotos" class="work-photo-gallery">
+                        </div>
+                    </div>
+                </div>
+                <div class="customer-reviews-section">
+                    <h2>Customer Reviews</h2>
+                    <div id="modalCustomerReviews" class="review-list">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="/booking.html"
+                    style="text-decoration: none; color: white;"><button id="modalBookNowBtn" class="btn book-now-btn"> Book Now </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="maps.js"></script>
+    <script>
+        function openMenu() {
+            document.getElementById('sidebar').style.display = 'flex';
+        }
+
+        function closeMenu() {
+            document.getElementById('sidebar').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+

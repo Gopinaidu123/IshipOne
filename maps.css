@@ -1,0 +1,558 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5; /* Light grey base background */
+    min-height: 100vh;
+}    
+.navbar {
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff; /* White navbar */
+    padding: 0.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    position: relative;
+    z-index: 10;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+}
+
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #555555; /* Dark grey links */
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 16px;
+    transition: color 0.2s;
+}
+
+.nav-center a:hover {
+    color: #ff8c00; /* Orange on hover */
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown on mobile */
+    color: #333; /* Hamburger icon color */
+}
+
+.Sidebar {
+    /* Styles for mobile sidebar, adjusted for grey/orange */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -220px; /* Initially hidden off-screen */
+    width: 220px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    padding: 2rem 1rem 1rem 1rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+}
+
+.Sidebar.open {
+    right: 0; /* Slide in when open */
+}
+
+.Sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.2s, background 0.2s;
+}
+
+.Sidebar a:hover {
+    color: #ff8c00;
+    background: #f0f0f0;
+}
+
+.close-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    text-align: right;
+    color: #555; /* Close icon color */
+}
+
+
+.header {    
+    /* Removed redundant header styling, as content seems to be directly in main-content */
+    display: none; /* Hide if no content is intended here */
+}
+
+.main-content {
+    display: flex;
+    margin: 16px;
+    gap: 16px;
+    height: calc(100vh - 80px - 32px); /* Adjust height based on actual navbar/header/margin */
+}
+
+.map-section {
+    flex: 2;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 16px;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.status-indicator {
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.status-success {
+    background: #ff8c00; /* Main orange color */
+    color: #ffffff; /* White text on orange */
+}
+
+.provider-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Lighter shadow for cards */
+}
+
+.provider-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #ff8c00; /* Orange top accent */
+}
+
+.provider-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.provider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.provider-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem; /* Slightly larger name */
+}
+
+.availability-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.available {
+    background: #e6ffe6; /* Light green */
+    color: #28a745; /* Dark green */
+}
+
+.busy {
+    background: #ffe6cc; /* Light orange */
+    color: #ff9800; /* Darker orange */
+}
+
+.offline {
+    background: #ffe6e6; /* Light red */
+    color: #dc3545; /* Dark red */
+}
+
+.provider-info {
+    margin: 8px 0;
+    color: #666;
+    line-height: 1.4;
+    font-size: 0.95rem; /* Slightly smaller info text */
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.stars {
+    color: #ffc107; /* Gold stars */
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    flex: 1;
+}
+
+.btn-details {
+    background: #ff8c00; /* Orange button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-details:hover {
+    background-color: #e67e00; /* Darker orange on hover */
+    transform: translateY(-1px);
+}
+
+.btn-details:active {
+    transform: translateY(0);
+}
+
+.distance-time {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+h3 {
+    color: #333; /* Dark grey for sidebar headings */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.spinner {
+    width: 25px; /* Slightly larger spinner */
+    height: 25px;
+    border: 3px solid #e0e0e0;
+    border-top: 3px solid #ff8c00; /* Orange spinner part */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 12px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.leaflet-routing-container {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.leaflet-routing-alt {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        margin: 10px;
+        gap: 10px;
+       
+    }
+    .map-section,
+    .sidebar {
+        height: 50vh; /* Give map and sidebar fixed height on smaller screens */
+    }
+    .map-section {
+        order: -1; /* Place map first on small screens */
+    }
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        height: 40px;
+    }
+}
+
+/* Modal (Hover Page) Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    backdrop-filter: blur(5px); /* BLUR EFFECT */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px; /* Increased padding */
+    border-radius: 15px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Stronger shadow for modal */
+    position: relative;
+    max-width: 950px; /* Wider modal */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+}
+
+.close-button {
+    color: #888; /* Grey close button */
+    font-size: 38px; /* Larger close button */
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #ff8c00; /* Orange on hover */
+}
+
+.modal-body {
+    display: flex;
+    gap: 35px; /* More space between sections */
+    padding-top: 25px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.provider-info-section,
+.customer-reviews-section {
+    background-color: #fcfcfc; /* Very light grey */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Inner shadow */
+    flex: 1;
+    min-width: 320px; /* Slightly larger min-width */
+}
+
+.modal-body h2,
+.modal-body h3 {
+    color: #ff8c00; /* Orange for modal headings */
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffcc99; /* Lighter orange border */
+    padding-bottom: 10px;
+    font-size: 1.8em; /* Larger modal headings */
+}
+
+.modal-body p {
+    margin-bottom: 12px; /* More spacing for paragraphs */
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05em;
+}
+
+.provider-work-photos {
+    margin-top: 30px; /* More space above photos */
+}
+
+.work-photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Slightly larger photo grid */
+    gap: 12px;
+}
+
+.work-photo-gallery img {
+    width: 100%;
+    height: 110px; /* Slightly taller photos */
+    object-fit: cover;
+    border-radius: 10px; /* More rounded photos */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for photos */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-photo-gallery img:hover {
+    transform: scale(1.08); /* More zoom on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review-list .review-item {
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0; /* Lighter border */
+    border-radius: 10px;
+    padding: 18px; /* More padding */
+    margin-bottom: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+}
+
+.review-list .review-item p {
+    margin-bottom: 8px;
+}
+
+.review-list .review-item .review-text {
+    font-style: italic;
+    color: #333;
+    font-size: 1.05em;
+}
+
+.review-list .review-item .reviewer-name {
+    font-weight: bold;
+    color: #777;
+    text-align: right;
+    font-size: 0.95em;
+    margin-top: 10px;
+}
+
+.modal-footer {
+    padding-top: 25px; /* More padding */
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 25px;
+}
+
+.book-now-btn {
+    background-color: #ff8c00; /* Orange button */
+    color: white;
+    padding: 18px 35px; /* Larger button */
+    font-size: 1.3em; /* Larger text */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 220px; /* Slightly wider */
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.book-now-btn:hover {
+    background-color: #e67e00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+    .modal-body {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 15px;
+    }
+    .provider-info-section,
+    .customer-reviews-section {
+        min-width: unset;
+        padding: 20px;
+    }
+    .modal-content {
+        padding: 20px;
+    }
+    .close-button {
+        font-size: 32px;
+        top: 10px;
+        right: 20px;
+    }
+    .modal-body h2,
+    .modal-body h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    .book-now-btn {
+        padding: 15px 25px;
+        font-size: 1.1em;
+        min-width: 180px;
+    }
+}
+
+/* Responsive navbar for mobile (kept as is mostly) */
+@media (max-width: 900px) {
+    .nav-center {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    /* Sidebar transition is handled by maps.js adding/removing 'open' class */
+}
+
+
+
