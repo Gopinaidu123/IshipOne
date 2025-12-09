@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  min-height: 100vh;
+  background:#bea183;
+}
+.wrapper {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.wrapper.active {
+  transform: rotateY(180deg);
+}
+
+.wrapper1,
+.wrapper2 {
+  width: 100%;
+  height: 100%;
+  /* box-shadow: 0 0 50px blanchedalmond; */
+  overflow: hidden;
+  position: absolute;
+  border-radius: 20px;
+
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.wrapper2 {
+  transform: rotateY(180deg);
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #fff;
+}
+
+form {
+  width: 80%;
+}
+
+h2 {
+  font-size: 30px;
+  color: rgb(252, 105, 25);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: gray;
+  padding: 0 5px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input input {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: black;
+  padding: 0 10px;
+  background: transparent;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: 0;
+  font-size: 12px;
+  background: #fff;
+  color: #000;
+}
+
+.box {
+  margin-bottom: 10px;
+}
+
+.box label {
+  color: black;
+  font-size: 14px;
+}
+
+.box label input {
+  accent-color: grey;
+}
+
+.menu span {
+  color: black;
+  font-size: 45px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+.menu span a {
+  text-decoration: none;
+  color: black
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+  /* color: ; */
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background:#6B5D50;
+  box-shadow: 0 5px 10px grey;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+button:hover{
+  background-color:rgb(252, 105, 25);
+}
+
+button:active {
+  background: #222;
+}
+
+.sign-link {
+  font-size: 14px;
+  text-align: center;
+}
+
+.sign-link p {
+  color: grey;
+}
+
+.sign-link p a {
+  color: rgb(252, 105, 25);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sign-link p a:hover {
+  text-decoration: underline;
+}
+.forgot-box {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: box 0.6s ease;
+}
+
+.forgot-box.show {
+  display: flex;
+}
+
+.forgot-box h2 {
+  margin-bottom: 30px;
+}
+
+.forgot-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: black;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.forgot-box input:focus {
+  border-color: black;
+}
+
+.forgot-box button {
+  width: 100%;
+  padding: 12px;
+  background-color:#6B5D50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.forgot-box button:hover{
+  background-color: rgb(252, 105, 25);
+}
+
+
+.forgot-box .link {
+  margin-top: 15px;
+}
+
+.forgot-box .link a {
+  color: red;
+  text-decoration: none;
+}
+
+.forgot-box .link a:hover {
+  text-decoration: underline;
+}
+
+@keyframes box {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.open button {
+  background-color: blue;
+  border-radius: 5px;
+  font-size: 26px;
+}
+.open button:hover {
+  background-color: yellow;
+}

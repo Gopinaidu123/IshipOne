@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div class="wrapper" id="card">
+        <div class="wrapper1">
+            <div class="form-wrapper sign-in">
+                <form onsubmit="event.preventDefault();">
+                    <div class="menu">
+                        <span onclick="closeCard()"> <a href="index.html">&times;</a></span>    
+                    </div>
+                    <h2>Login</h2>
+                    <div class="input">
+                        <input type="text" id="login-username" required />
+                        <label for="login-username">Username</label>
+                    </div> 
+                    <div class="input">
+                        <input type="password" id="login-password" required />
+                        <label for="login-password">Password</label>
+                    </div>
+                    <div class="box">
+                        <label><input type="checkbox" /> Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-link" onclick="showForgot()">Forgot Password?</a>
+                    <button type="submit">Login</button>
+                    <div class="sign-link">
+                        <p>Don't have an account? <a class="signup-link" href="#">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="wrapper2">
+            <div class="form-wrapper sign-up">
+                <form onsubmit="event.preventDefault();">
+                    <div class="menu">
+                        <span onclick="closeCard()"> <a href="index.html">&times; </a></span>
+                    </div>
+                    <h2>Sign Up</h2>
+                    <div class="input">
+                        <input type="text" id="signup-username" required />
+                        <label for="signup-username">Username</label>
+                    </div>
+                    <div class="input">
+                        <input type="email" id="signup-email" required />
+                        <label for="signup-email">Email</label>
+                    </div>
+                    <div class="input">
+                        <input type="password" id="signup-password" required />
+                        <label for="signup-password">Password</label>
+                    </div>
+                    <div class="box">
+                        <label><input type="checkbox" /> I agree to the Terms & Conditions</label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div class="sign-link">
+                        <p>Already have an account? <a class="signin-link" href="#">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="forgot-box" id="forgot-box">
+            <h2>Reset Password</h2>
+            <input type="email" placeholder="Enter your email" required>
+            <button>Send Reset Link</button>
+            <div class="link">
+                <p><a href="#" onclick="backToLogin()">Back to Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./login.js">
+
+
+
+    </script>
+</body>
+
+</html>
