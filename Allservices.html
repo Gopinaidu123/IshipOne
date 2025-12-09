@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Hands - Repairs & Services</title>
+  <link rel="stylesheet" href="Allservices.css" />
+</head>       
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-left">
+      <img src="/assets/logo.jpg" alt="logo" class="logo">
+    </div>
+
+    <!-- Hamburger toggle -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <!-- Nav links -->
+    <div class="nav-center" id="menu">
+      <a href="#home">Home</a>
+      <a href="#About-Us">About Us</a>
+      <a href="#provider">Become a Provider</a>
+      <a href="#booking">Booking Status</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>Repairs & Services</h1>
+    <div class="filter-buttons">
+      <button class="active" onclick="filterCards('all')">All</button>
+      <button onclick="filterCards('appliance')">Appliances</button>
+      <button onclick="filterCards('electronics')">Electronics</button>
+      <button onclick="filterCards('vehicle')">Vehicles</button>
+      <button onclick="filterCards('other')">Others</button>
+    </div>
+  </header>
+
+  <section class="card-grid" id="cardGrid">
+    <!-- Cards will be injected from JS -->
+  </section>
+
+  <script src="services.js"></script>
+</body>
+</html>
