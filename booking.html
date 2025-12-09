@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Service - Local Hands</title>
+  <link rel="stylesheet" href="booking.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <div class="navbar"> 
+    <div class="nav-left">
+      <img src="assets/logo2.jpg" alt="logo" class="logo">                         
+    </div>
+    <div class="nav-center">
+      <a href="#home">Home</a> 
+      <a href="#About-Us">About Us</a>
+      <a href="#provider">Become a Provider</a>
+      <a href="#booking-status">Booking Status</a>
+    </div>
+    <div class="nav-right">
+      <div class="hamburger" onclick="openMenu()">☰</div>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="left-panel" id="serviceProviderInfo">
+      <div class="provider-photo">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Service Provider">
+      </div>
+      <h3>John Doe</h3>
+      <div class="info-block">
+        <p><strong>Category:</strong> Electrician</p>
+        <p><strong>Experience:</strong> 5+ years</p>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐☆</p>
+        <p><strong>Phone:</strong> +91 9876543210</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <p><strong>Location:</strong> Hyderabad, Telangana</p>
+        <p><strong>Available:</strong> Mon–Sat, 9 AM – 6 PM</p>
+        <p><strong>Languages:</strong> English, Telugu</p>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <h2>Book Your Service</h2>
+      <form id="booking-form">
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Your contact number" required />
+        </div>
+        <div>
+          <label for="issue">Issue Description</label>
+          <textarea id="issue" name="issue" placeholder="Briefly describe your issue" required></textarea>
+        </div>
+        <div>
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" placeholder="Your service location" required />
+        </div>
+        <input type="submit" value="Submit Request" />
+      </form>
+    </div>
+  </div>
+
+  <script src="booking.js"></script>
+</body>
+</html>
+
+
+
