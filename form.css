@@ -1,0 +1,109 @@
+/* Translucent overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); /* slight white opacity */
+  z-index: -1;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;   
+  margin: 0;
+}
+
+/* Form container */
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(107, 92, 76, 0.2);
+  z-index: 1;
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #6b5c4c;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #6b5c4c;
+}
+
+/* Inputs and textareas */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6b5c4c;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #6b5c4c;
+  background-color: #fff9f3;     
+  box-sizing: border-box;
+}
+
+/* File input */
+form input[type="file"] {
+  padding: 5px;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #fc6919;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65b12;
+}
+
+/* Validations */
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: #28a745;
+}
+
+/* Upload wrapper */
+.image-upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Tick icon */
+.tick-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+}
+
