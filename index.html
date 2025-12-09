@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Hands</title>  
+    <link rel="stylesheet" href="myStyle.css" />
+    <script src="https://kit.fontawesome.com/f09ceee3c1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main" id="home">
+        <div class="navbar">
+            <div class="nav-left">
+                <img src="/assets/logo.jpg" alt="logo" class="logo">   
+            </div>
+            <div class="nav-center">
+                <a href="#home">Home</a>
+                <a href="#About-Us">About Us</a>
+                <a href="#provider">Become a Provider</a>   
+                <!-- <a href="#intro-panel">All services</a> -->
+
+                <a href="mybooking.html">Booking Status</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="sign-in-btn">Sign In</a>
+                <div class="hamburger" onclick="openMenu()">☰</div>
+            </div>
+        </div>
+        <div class="all-content">
+            <div class="Sidebar">
+                <div class="close-icon" onclick="closeMenu()">✖</div>
+                <a href="#home"> Home</a>
+                <a href="#About-Us">About Us</a>
+                <a href="#provider"> Become a Provider</a>
+                <a href="#provider"> Booking Status</a>
+                 <a href="#intro-panel">Supporter</a>
+
+                <a href="login.html"> Sign In</a>
+            </div>
+
+            <div class="slider-cont">
+                <div class="slider-wr">
+                    <div class="slider">
+                        <img id="slide-1" src="/assets/location1.jpg" alt="img1">
+                        <img id="slide-2" src="/assets/Electrician2.jpg" alt="img2">
+                        <img id="slide-3" src="/assets/Maid3.jpg" alt="img3">
+                        <img id="slide-4" src="/assets/Carpenter4.jpg" alt="img4">
+                        <img id="slide-5" src="/assets/Trusted5.jpg" alt="img5">
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
+                        <a href="#slide-4"></a>
+                        <a href="#slide-5"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="left">
+                    <h1>Your Trusted <span>Link</span> to <span>Local</span> Experts.</h1>
+                    <p>Skilled Help, Right at Your Doorstep.<br><br>
+                        Need a plumber, electrician, maid, or carpenter? <br>
+                        We connect you instantly with trusted professionals nearby.</p>
+                    <!-- <button class="signIn-btn">
+                        <a href="#">Explore</a>
+                    </button> -->
+                </div>
+                <div class="right">
+                    <video autoplay muted loop src="./assets/video2 (1).mp4" alt="img">
+                </div>
+            </div>
+        </div>
+<!-- services-->
+
+<section class="section-container">
+    <!-- Left Section -->
+    <div class="intro-panel">
+      <h1>Expert<br>Handyman<br>Services</h1>
+      <p>From Minor Repairs to Major Renovations, We've Got You Covered</p>
+      <img src="https://d27vg8jo26ejl7.cloudfront.net/images/partner_registration/ru-service-provider.png" alt="Handyman Image" class="main-image" />
+      <button class="cta-button"><a href="./Allservices.html">Explore More</a></button>
+    </div>
+
+    <!-- Right Section -->
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://bernardspillane.ie/wp-content/uploads/2020/02/General-Repairs-Maintenance.jpg" alt="Repairs Icon" class="service-image"/>
+        <h3>General Repairs</h3>
+        <p>Fixing leaky faucets, broken windows, tiles, and door hardware.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://handymanofcobb.com/wp-content/uploads/2022/05/greensboro-professional-painters-drywall-repair-1_orig.jpg" alt="Painting Icon" class="service-image"/>
+        <h3>Painting</h3>
+        <p>Interior/exterior painting, wallpaper installation, touch-ups, and varnishing.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEj7vi5hPJaVwqevmM2VO5gn5ODfnHuxLxfw&s" alt="Flooring Icon" class="service-image"/>
+        <h3>Flooring</h3>
+        <p>Installation of hardwood, vinyl, laminate, and tile flooring for all spaces.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiRS_-NgOWRgSBmi3JAGXg7_hEZpjzw-PqiA&s" alt="Assembly Icon" class="service-image"/>
+        <h3>Assembly</h3>
+        <p>Furniture assembly, fitness equipment setup, and cabinet installation.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- learn more-->
+
+     <div class="aboutprovs">
+            <section class="section about-section">
+                <div class="about-img-wrapper">
+                    <img src="https://thanksfortoday.studio/fixit/wp-content/uploads/sites/40/2024/05/builder-working-on-house-rennovation-2023-11-27-05-12-39-utc.jpg"
+                        alt="Worker">
+                </div>
+                <div class="about-text-content">
+                    <h4>ABOUT US</h4>
+                    <h2>Quality Services for All Your<br>Home Repair Needs</h2>
+                    <p>Discover a comprehensive range of professional home repair solutions tailored to meet your needs
+                        with
+                        unmatched quality and reliability.</p>
+                       <button class="btn-learn-more" onclick="location.href='#how-it-works'">Learn More</button>
+                </div>
+            </section>
+
+            <section class="section why-section">
+                <div class="why-text-content">
+                    <h4>WHY CHOOSE US</h4>
+                    <h2>We're the Best Choice for Your<br>Handyman Needs</h2>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div>
+                                <h5>Experienced Professionals</h5>
+                                <p>Our team is made up of skilled and certified handymen with extensive experience
+                                    across
+                                    various trades.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            </div>
+                            <div>
+                                <h5>Quality Workmanship</h5>
+                                <p>We pride ourselves on delivering exceptional quality in every job we undertake. Our
+                                    meticulous attention to detail guarantees.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h5>Fully Insured</h5>
+                                <p>For your peace of mind, our services are fully insured, protecting you and your
+                                    property
+                                    throughout the project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-img-wrapper">
+
+                    <div class="why-image">
+                        <img src="https://thanksfortoday.studio/fixit/wp-content/uploads/sites/40/2024/05/happy-female-client-and-maintenance-service-worker-2023-11-27-05-21-55-utc.jpg"
+                            alt="handshake">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+<!--steps to use-->
+        <div class="work-section">
+            <div class="work-header">
+                <div class="header-text">
+                    <p class="label">HOW IT WORKS</p>
+                    <h2 class="title">Step-by-Step Guide: How Our Handyman Services Work for You</h2>
+                </div>
+                 
+            </div>
+
+            <div class="work-cards">
+                <div class="card brown-card">
+                    <div class="card-num">01</div>
+                    <h3 class="card-head">Consultation and Detailed Project Estimate</h3>
+                    <p class="card-text">We'll schedule a convenient time to assess the job and provide a detailed,
+                        transparent estimate.</p>
+                </div>
+
+                <div class="card white-card">
+                    <div class="card-num">02</div>
+                    <h3 class="card-head">Flexible Scheduling Options Tailored to Your Convenience</h3>
+                    <p class="card-text">Once you've reviewed and approved the estimate, our team will arrange a time to
+                        start the project.</p>
+                </div>
+
+                <div class="card brown-card">
+                    <div class="card-num">03</div>
+                    <h3 class="card-head">Execution: Bringing Your Home Projects to Life</h3>
+                    <p class="card-text">Our skilled handyman team will arrive on time, fully equipped to complete the
+                        job efficiently and professionally.</p>
+                </div>
+
+                <div class="card white-card">
+                    <div class="card-num">04</div>
+                    <h3 class="card-head">Quality Inspection to Ensure Exceptional Workmanship</h3>
+                    <p class="card-text">After completing the work, we'll conduct a quality check to ensure everything
+                        meets our standards.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+<!-- Become a Provider-->
+
+       <div class="Provider" id="provider">
+            <div class="provider-container">
+                <div class="provider-left">
+                    <h2>Become a Provider</h2>
+                    <p>Join Local Hands and offer your skills to the community! Whether you're a plumber, electrician,
+                        carpenter, or maid — we welcome all trusted professionals. Create your profile, verify your
+                        credentials, and start receiving real-time job requests from users nearby.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i> Sign up and create your profile</li>
+                        <li><i class="fa-solid fa-shield-halved"></i> Verify your identity and skills</li>
+                        <li><i class="fa-solid fa-handshake"></i> Get instant bookings from nearby users</li>
+                    </ul>
+                    <button class="signIn-btn"><a href="form.html">Deep Dive</a></button>
+                </div>
+                <div class="provider-right">
+                    <img src="assets/providerimg.png" alt="Become a Provider" />
+                </div>
+            </div>
+        </div>
+<!-- About us-->
+       <div class="Aboutus" id="About-Us">
+            <h2>About Our Team</h2>
+            <div class="team-slider">
+                <div class="fullteam">
+                    <div class="team-member1">
+                        <div class="pic-frame">
+                            <img src="https://mobile.technicalhub.io:5010/student/23MH1A4226.png">
+                        </div>
+                        <h3>K.TARUN</h3>
+                        <p>Roll No: 23MH1A4226</p>
+                        <p> FSD With REACT NATIVE</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="pic-frame">
+                            <img src="assets/charan.jpg">
+                        </div>
+                        <h3>G.GURU CHARAN</h3>
+                        <p>Roll No: 23A91A1220</p>
+                        <p>FSD With REACT NATIVE</p>
+                    </div>
+
+                    <div class="team-member1">
+                        <div class="pic-frame">
+                            <img src="assets/revanth.jpg">
+                        </div>
+                        <h3>S.REVANTH REDDY</h3>
+                        <p>Roll No: 23A91A12C1</p>
+                        <p>FSD With REACT NATIVE</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="pic-frame">
+                            <img src="https://mobile.technicalhub.io:5010/student/23A91A1258.png">
+                        </div>
+                        <h3>SK THAHEER</h3>
+                        <p>Roll No : 23A91A1258</p>
+                        <p>FSD With REACT NATIVE</p>
+                    </div>
+
+                    <div class="team-member1">
+                        <div class="pic-frame">
+                            <img src=" https://mobile.technicalhub.io:5010/student/23MH1A4255.png">
+                        </div>
+                        <h3>GOPI NAIDU</h3>
+                        <p>Roll No: 23MH1A4255</p>
+                        <p>FSD With REACT NATIVE</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="pic-frame">
+                            <img src="assets/bhuvan.jpg">
+                        </div>
+                        <h3>M.BHUVAN RAJ</h3>
+                        <p>Roll No : 23A91A1231</p>
+                        <p>FSD With REACT NATIVE</p>
+                    </div>
+                    <div class="team-member1">
+                        <div class="pic-frame">
+                            <img src="https://mobile.technicalhub.io:5010/student/23MH1A4226.png""/>
+                        </div>
+                        <h3>K.TARUN</h3>
+                        <p>Roll No:23MH1A4226</p>
+                        <p> FSD With REACT NATIVE</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="row">
+            <div class="col logo-col">
+              <img src=".//assets/localhandsicon.jpg" alt="icon" class="footlogo">
+            </div>
+            <div class="col">
+                <h3>Aditya University
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p>Technical Hub</p>
+                <p>Surampalem</p>
+                <p>AndhraPradesh, India</p>
+                <p class="email-id">email@gmail.com</p>
+                <h4>+91 - 1122334455</h4>
+            </div>
+            <div class="col">
+                <h3>Links <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#provider">Provider</a></li>
+                    <li><a href="#About-Us">About Us</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>News Letter <div class="underline"><span></span></div>
+                </h3>
+                <form>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="social-ic">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyrights">Local Hands <i class="fa-regular fa-copyright"></i> 2025 - All Rights Reserved </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
