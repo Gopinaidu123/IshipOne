@@ -1,0 +1,162 @@
+body {    
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif; 
+  background: #E1C4A6;
+  color: #333;
+}      
+
+.navbar {     
+  height:70px;
+  display: flex;        
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9ffff;              
+  padding: 10px 20px;  
+  border-bottom: 1px solid #ccc;
+  position: sticky;      
+  top: 0;        
+  z-index: 1000;
+}
+
+.nav-left img.logo {     
+  width: 100px;
+  height: auto;      
+}
+
+.nav-center {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-center a:hover {
+  color: #FC6919;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Hidden checkbox */
+#menu-toggle {    
+  display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-center {
+    position: fixed;
+    top: 75px;
+    right: -100%;
+    height: 100vh;
+    width: 200px;
+    background-color: #f9ffff;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+  }
+
+  #menu-toggle:checked ~ .nav-center {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background-color: #E1C4A6;
+}
+
+.page-header h1 {
+  font-size: 38px;
+  color: #FC6919;
+  margin-bottom: 20px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #6B5C4C;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background-color: #FC6919;
+  color: #fff;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card .card-img {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card .card-label {
+  background-color: #8d8378;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  padding: 14px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.card .card-label:hover {
+  background-color: #FC6919;
+}
